@@ -1,0 +1,5 @@
+FROM opencoredata/janus:0.9.1
+
+EXPOSE 1521
+
+CMD /startup.sh && tail -f /var/log/messages

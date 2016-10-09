@@ -1,15 +1,21 @@
 # Open Core Data Documentation 
 
-### About
+## About
+
+This is the start of the Open Core Data documnetation.   The goal is to provide a 
+set of documents addressing:
+
+* the use of Open Core Data by scientist
+* an architecture overview to facilitate discussion among other geoinformatics professionals
+* sufficient documentation to allow others to operate and administer the Open Core Data domain and applications. 
+
+The document will evolve and split to facilitate these goal.  At present this document is a first version 
+addressing the use of [opencoredata.org](http://opencoredata.org).  An [architecture](./Architecture.md) document 
+is also under development to expose of the approaches being used.  Later an administration document will likely
+split out of the architecture file. 
 
 
-This is the start of the Open Core Data documnetation in markdown
-
-
-[Architecture](./Architecture.md)
-
-
-### RE3 citation
+## RE3 citation
 If you need to reference Open Core Data you can do so using the 
 RE3Data DOI: http://doi.org/10.17616/R37936 
 
@@ -24,17 +30,31 @@ http://doi.org/10.17616/R37936 last accessed: 2016-08-25
 ```
 
 
-### OutReach Events
+## OutReach Events
+Open Core Data is present at as many events as possible.  Below is a revese chronological order list with
+future events at the top.  Please feel free to reach out to arrange getting together at these or other 
+events. 
 
-* CSDCO Science Meeting
-* LacCore Developer meeting (Madison) 
-* LacCore drilling institute
-* Linked Earth meeting
-* C4P Hackathon
-* EarthCube All Hands
-* ESIP Summer meeting (North Carolina)
+* AGU Fall meeting SF Dec 2016 
+```
+Abstract ID and Title: 186461: Open Core Data: Connecting scientific drilling 
+data to scientists and community data resources 
+Final Paper Number: IN53C-1898 
+Presentation Type: Poster 
+Session Date and Time: Friday, 16 December 2016; 13:40 - 18:00 
+Session Number and Title: IN53C: Innovative Tools and Services to Enable Data Use 
+across Broad User Communities II Posters 
+Location: Moscone South; Poster Hall
+```
+* CSDCO Science Meeting Hilton Arlington Arlington, Virginia Washington D.C. Nov 13-14 2016
+* LacCore Developer meeting Madison Wisonsin  Nov 3-4 2016 
+* LacCore drilling institute June 13-24 and August 9-19 2016
+* ESIP Summer meeting July 19-22 2016 Chapel Hill, NC
+* EarthCube All Hands  July 6-8 2016 Denver Colorado
+* Linked Earth meeting June 22-23 Denver Colorado
+* C4P Hackathon  June 20-21 Denver Colorado
 
-### Community connections
+## Community connections
 
 In order to enhance the impact of scientific drilling and core data, opencoredata.org 
 will work with domain-specific data management efforts to ensure that drilling results
@@ -47,20 +67,33 @@ related data for enhanced analysis and cross-disciplinary research.
 
 Diary of interaction with the following groups:
 
-* Fly Over Country
+* [Fly Over Country](http://fc.umn.edu/)  Open Core is working with FC developers to 
+incorporate data holdings into this popular iOS and Android app.  Several APIs have 
+been developed to expose metadata, links and abstract information for this app.  These 
+APIs are documented along with all other Open Core APIs at the
+[Open Core Swagger docs](http://opencoredata.org/common/swagger-ui/)
 
-* Neotoma
+* [Neotoma](http://neotomadb.org/)  Open Core Data is working with Neotoma as an example how 
+to improve the flow of data from facilities to community data portals like MagIC. 
+Neotoma Paleoecology Database and Community is an online hub for data, research, education, 
+and discussion about paleoenvironments. Anyone with an Internet connection can access Neotoma.
 
-* Gplates
-
-* GeoLink
-
-* Magic
+* [Gplates](http://portal.gplates.org/)
 
 
-### Citation
+* [GeoLink](http://www.geolink.org/)  Open Core has a close connection with GeoLink.  
+Many of the RDF based resources are connected to GeoLink ontology classes.
 
-### Provenance 
+* [Magic](https://earthref.org/MagIC/)  Open Core Data is working with MagIC as an example 
+how to improve the flow of magnetics data from facilities to community data portals like 
+MagIC. MagIC is focused on promoting information technology infrastructures for the 
+international paleomagnetic, geomagnetic and rock magnetic community.
+
+* [GeoDeepDive](https://geodeepdive.org/)
+
+## Citation
+
+## Provenance 
 Discussions with Hook Hau, Adam Leadbetter and other related to the 
 development of provenance data for data have lead to some test using 
 the PROV_ES patterns (ref: http://pymonger.github.io/prov_es/index.html) 
@@ -71,9 +104,9 @@ This is potentially important as work is done to move data out of OCD and
  show up in ocdJans and ocdCSDCO to allow this metadata to be interconnected 
  with other metadata.  
 
-### APIs
+## APIs
 
-### Semantics & Vocabularies
+## Semantics & Vocabularies
 
 Semantics is woven through the entire system providing the link structure for the 
 LOD patterns and the connections into the GeoLink and other graphs.
@@ -90,9 +123,9 @@ measurement and aggregation searches that will be included into a SKOS vocabular
 Future work will connect these with ODM2 developments. 
 
 
-### Notebook development
+## Notebook development
 
-### Formats for Data & Metadata
+## Formats for Data & Metadata
 
 As noted there are several key patterns and standards (or recommendations) being used in OCD data. 
 These include:

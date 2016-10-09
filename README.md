@@ -12,8 +12,11 @@ other work hosted here.
 * [Architecture](./Architecture.md)
 
 
-### ToDo and current events in development
+### Things coming soon...
 
-- [ ] Services for generating datacite 4.0 documents 
-- [ ] Finish migration of remaining RDF datacite
-- [ ] KML "microservice" (not really a microservice)
+- [ ] Free text indexing of RDF resources
+- [ ] Services for generating datacite 4.0 documents in order to register resources for DOI's 
+via EZID ref: [ocdGarden ezidClient](https://github.com/OpenCoreData/ocdGarden/tree/master/ezidClient)
+- [ ] Finish RDF publishing and pushing them out via VoID.  
+- [ ] KML "microservice" (not really a microservice) to build out some extra geospatial options
+- [ ] Jypiter notebook updates to include in some new API's in the examples

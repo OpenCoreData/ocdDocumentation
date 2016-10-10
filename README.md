@@ -8,8 +8,8 @@ other work hosted here.
 
 
 ### Main documents
-* [Open Core](./OpenCore.md) 
-* [Architecture](./Architecture.md)
+* [Open Core](./OpenCore.md)  This is the main document at this time.
+* [Architecture](./Architecture.md)  This document is only a skelton version
 
 
 ### Things coming soon...

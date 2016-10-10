@@ -79,7 +79,8 @@ Neotoma Paleoecology Database and Community is an online hub for data, research,
 and discussion about paleoenvironments. Anyone with an Internet connection can access Neotoma.
 
 * [Gplates](http://portal.gplates.org/)
-
+Discussions have started with Gplates on approaches to using Open Core Data data holdings in 
+gplates.
 
 * [GeoLink](http://www.geolink.org/)  Open Core has a close connection with GeoLink.  
 Many of the RDF based resources are connected to GeoLink ontology classes.
@@ -92,9 +93,12 @@ international paleomagnetic, geomagnetic and rock magnetic community.
 * [GeoDeepDive](https://geodeepdive.org/)
 
 ## Citation
+Data citation examples will be coming to OCD data landing pages.  The approach will be 
+guided by the 
+[ESIP Data Stewardship/Citation guidelines](http://wiki.esipfed.org/index.php/Interagency_Data_Stewardship/Citations/provider_guidelines).
 
 ## Provenance 
-Discussions with Hook Hau, Adam Leadbetter and other related to the 
+Discussions with Hook Hau, Adam Leadbetter, Sky Bristol and other related to the 
 development of provenance data for data have lead to some test using 
 the PROV_ES patterns (ref: http://pymonger.github.io/prov_es/index.html) 
 some intial testing using this library (https://gist.github.com/fils/f65feca2632dbdd86032 ) 
@@ -105,6 +109,11 @@ This is potentially important as work is done to move data out of OCD and
  with other metadata.  
 
 ## APIs
+API development is following best practices in both URL structure and request
+response formats.  All APIs are documented in the Swagger format with OpenAPI 
+approaches being monitored.  
+[Open Core Swagger docs](http://opencoredata.org/common/swagger-ui/)
+
 
 ## Semantics & Vocabularies
 
@@ -124,6 +133,10 @@ Future work will connect these with ODM2 developments.
 
 
 ## Notebook development
+Initial notebook development will be in the iPython/Jupyter notebook environment. 
+Talk has taking place with others about development of an R library for access to 
+these reosources.  All this work will be hosted at the 
+[Open Core Data Notebooks repo](https://github.com/OpenCoreData/OpenCoreNotebooks).
 
 ## Formats for Data & Metadata
 

@@ -9,12 +9,13 @@ other work hosted here.
 
 ### Main documents
 * [Open Core](./OpenCore.md)  This is the main document at this time.
+* User guide  An early version of this is coming 
 * [Architecture](./Architecture.md)  This document is only a skelton version
 
 
 ### Things coming soon...
 
-- [ ] Free text indexing of RDF resources
+- [ ] Free text indexing of RDF resources (allow searches like leg:X  measurement:X  project:X)
 - [ ] Services for generating datacite 4.0 documents in order to register resources for DOI's 
 via EZID ref: [ocdGarden ezidClient](https://github.com/OpenCoreData/ocdGarden/tree/master/ezidClient)
 - [ ] Finish RDF publishing and pushing them out via VoID.  

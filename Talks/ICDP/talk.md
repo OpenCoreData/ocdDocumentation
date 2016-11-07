@@ -4,7 +4,8 @@
 
 Open Core Data Status Update for ICDP
 ===
-# ![](./media/drillheads.jpg)
+![drillheads](./media/drillheads.jpg)
+
 ##### A review of Open Core Data [opencoredata.org](http://opencoredata.org)
 ###### Douglas Fils ( [@fils](https://twitter.com/fils) )
 ---

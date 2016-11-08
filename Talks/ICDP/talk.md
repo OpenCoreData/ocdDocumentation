@@ -145,6 +145,23 @@ This will be driven by a few keys elements
 Early start will likely be 1 way flow out of OCD of data with provenance.  From there we will build out the approach.
 
 ---
+## Access Methods
+
+image here showing SPARQL, API (Jupyter and R) and machine and human web crawling
+
+
+---
+## Ingest Methods
+
+image here showing ETL process for ocdFX, transform from relational to DB + RDF, image loading and relations   (note DOI, IGSN and potentially Orcid assignment here)
+
+
+---
+
+
+
+
+
 ## Thanks! 
 
 ### Douglas Fils

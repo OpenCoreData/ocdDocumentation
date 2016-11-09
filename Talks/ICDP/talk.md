@@ -12,10 +12,10 @@ Open Core Data Status Update for ICDP
 ---
 # Outline
 
-- **Overivew of Open Core**
+- **Overview of Open Core**
 - **Review of Architecture**
 	- Docker based for easy deployment and migration
-	- Simple dependancy approach
+	- Simple dependency approach
 - **Key components  (Web, Semantic, Search, Document, API)**
 - **Functional Goals**
 	- Semantic connection
@@ -26,7 +26,7 @@ Open Core Data Status Update for ICDP
 ---
 # Over View
 
-Open Core Data hosts metadata and optionaly raw data for CSDCO and JRSO.  This data is semantically enhanced and connected using community vocabularies where possible and minimal self maintained vocabularies where required.  
+Open Core Data hosts meta-data and optionally raw data for CSDCO and JRSO.  This data is semantically enhanced and connected using community vocabularies where possible and minimal self maintained vocabularies where required.  
 
 <img src="./media/connections.png" alt="connections" style="width: 400px;"/>
 
@@ -45,7 +45,7 @@ Open Core Data hosts metadata and optionaly raw data for CSDCO and JRSO.  This d
 
 ```md
 # Docker based
-All elemented deploy from Docker files (most included 
+All elements deploy from Docker files (most included 
 at github)
 Use official containers for things like Mongo and others
 we can
@@ -57,7 +57,7 @@ Development done in a modern web centric language.
 
 # Polyglot Persistence  (all containerized)
 - Triplestore (Blazegraph) for graphs
-- MongoDB Mostly for core images, PDFs & otherblobs  
+- MongoDB Mostly for core images, PDFs & other blobs  
   (some spatial use of Mongo as well)
 - Relational (Janus) (and perhaps CSDCO and CHRONOS)
 ```
@@ -88,7 +88,7 @@ ontologies and vocabularies
 Search (free text)
 ```html
 - Based on Bleve (similar to Lucene)
-- Allows mutli-index and faceted results.
+- Allows multi-index and faceted results.
 - Low level, flexible to integrate but requires extra 
 effort in the UI area. (components being developed)  
 ```
@@ -98,7 +98,7 @@ Document storage and API (and SPARQL)
 Documents stored in MongoDB (GridFS)
 
 API in Go with Swagger definitions
-The APIs are still a quickly developing apsect.  Will use a
+The APIs are still a quickly developing aspect.  Will use a
 stable, dev, beta breakdown for them.
 
 Access to all elements of OCD.  So external sites can call for
@@ -125,11 +125,11 @@ site UI/UX.
 
 [Example Landing Page](http://opencoredata.org/doc/dataset/2de213cc-ea25-435b-b46e-781bd60d9e5c)
 
-All pages have embedded Schema.org/Dataset and [CSVW](https://www.w3.org/TR/2015/REC-tabular-data-model-20151217/) (CSV for the Web) metadata.
+All pages have embedded Schema.org/Dataset and [CSVW](https://www.w3.org/TR/2015/REC-tabular-data-model-20151217/) (CSV for the Web) meta-data.
 
 Access to datasets can be obtained both via SPARQL or Linked Open Data methods or via API calls.  
 
-Access to the CSDCO datasets is being developed under the [ocdFX](https://github.com/OpenCoreData/ocdFX) project.  Data is being indexed and metadata and search index available in OCD.  Links to files at CSDCO or IEDA are supported. 
+Access to the CSDCO datasets is being developed under the [ocdFX](https://github.com/OpenCoreData/ocdFX) project.  Data is being indexed and meta-data and search index available in OCD.  Links to files at CSDCO or IEDA are supported. 
 
 ---
 ## Cross site connections 
@@ -145,15 +145,21 @@ This will be driven by a few keys elements
 Early start will likely be 1 way flow out of OCD of data with provenance.  From there we will build out the approach.
 
 ---
-## Access Methods
+## Ingest Methods
 
-image here showing SPARQL, API (Jupyter and R) and machine and human web crawling
+
+
+![intake](./media/intake.png)
+
 
 
 ---
-## Ingest Methods
 
-image here showing ETL process for ocdFX, transform from relational to DB + RDF, image loading and relations   (note DOI, IGSN and potentially Orcid assignment here)
+## Access Methods
+
+Working with groups like Flyover Country, Gplates (future), Neotoma, Magic and others for using downstream data
+
+![access](./media/access.png)
 
 
 ---

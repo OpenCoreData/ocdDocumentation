@@ -38,7 +38,7 @@ Open Core Data hosts meta-data and optionally raw data for CSDCO and JRSO.  This
 ---
 # Table of functional activities
 
-<img src="./media/tableUpdate.png" alt="table of updates" >
+<img src="./media/tableUpdate.png" alt="table of updates" style="align:right; width: 100%;"/> 
 
 ---
 # Architecture
@@ -142,7 +142,7 @@ This will be driven by a few keys elements
 - Methods to identify data updates
 - Two way connections and citation of data between partners
 
-Early start will likely be 1 way flow out of OCD of data with provenance.  From there we will build out the approach.
+Early start will likely be 1 way flow out of **OCD of data with provenance**.  From there we will build out the approach.
 
 ---
 ## Ingest Methods
@@ -155,7 +155,7 @@ Early start will likely be 1 way flow out of OCD of data with provenance.  From 
 
 ---
 
-## Access Methods
+## Access Methods (human and machine)
 
 Working with groups like Flyover Country, Gplates (future), Neotoma, Magic and others for using downstream data
 

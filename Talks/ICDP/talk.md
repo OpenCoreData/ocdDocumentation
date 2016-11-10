@@ -29,6 +29,7 @@ Open Core Data Status Update for ICDP
 Open Core Data hosts meta-data and optionally raw data for CSDCO and JRSO.  This data is semantically enhanced and connected using community vocabularies where possible and minimal self maintained vocabularies where required.  
 
 <img src="./media/connections.png" alt="connections" style="width: 400px;"/>
+<img src="./media/ven.png" alt="ven" style="width: 300px;"/>
 
 ---
 # The flow of interactions
@@ -138,7 +139,7 @@ As noted earlier in this document a key goal of Open Core Data is the exposure o
 
 This will be driven by a few keys elements
 
-- Open data + Provenance
+- Open data + PIDs + Provenance (W3C Prov is a key element here)
 - Methods to identify data updates
 - Two way connections and citation of data between partners
 
@@ -146,12 +147,9 @@ Early start will likely be 1 way flow out of **OCD of data with provenance**.  F
 
 ---
 ## Ingest Methods
-
-
+Not shown is the Bleve index (a simple KV store)
 
 ![intake](./media/intake.png)
-
-
 
 ---
 
@@ -161,6 +159,7 @@ Working with groups like Flyover Country, Gplates (future), Neotoma, Magic and o
 
 ![access](./media/access.png)
 
+> *Note: Bulk RDF downloads enable OCD to act as a pass through semantic enhancement (possibly via GeoLink)
 
 ---
 

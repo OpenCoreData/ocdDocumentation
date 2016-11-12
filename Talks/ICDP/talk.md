@@ -5,7 +5,7 @@
 
 Open Core Data Status Update for ICDP
 ===
-![drillheads](./media/drillHeads.jpg)
+![drillheads](../media/drillHeads.jpg)
 
 ##### A review of Open Core Data [opencoredata.org](http://opencoredata.org)
 ###### Douglas Fils ( [@fils](https://twitter.com/fils) )
@@ -28,18 +28,18 @@ Open Core Data Status Update for ICDP
 
 Open Core Data hosts meta-data and optionally raw data for CSDCO and JRSO.  This data is semantically enhanced and connected using community vocabularies where possible and minimal self maintained vocabularies where required.  
 
-<img src="./media/connections.png" alt="connections" style="width: 400px;"/>
-<img src="./media/ven.png" alt="ven" style="width: 300px;"/>
+<img src="../media/connections.png" alt="connections" style="width: 400px;"/>
+<img src="../media/ven.png" alt="ven" style="width: 300px;"/>
 
 ---
 # The flow of interactions
 
-<img src="./media/bubbles.png" alt="connections" style="align:right; height: 600px;"/>
+<img src="../media/bubbles.png" alt="connections" style="align:right; height: 600px;"/>
 
 ---
 # Table of functional activities
 
-<img src="./media/tableUpdate.png" alt="table of updates" style="align:right; width: 100%;"/> 
+<img src="../media/tableUpdate.png" alt="table of updates" style="align:right; width: 100%;"/> 
 
 ---
 # Architecture
@@ -149,7 +149,7 @@ Early start will likely be 1 way flow out of **OCD of data with provenance**.  F
 ## Ingest Methods
 Not shown is the Bleve index (a simple KV store)
 
-![intake](./media/intake.png)
+![intake](../media/intake.png)
 
 ---
 
@@ -157,7 +157,7 @@ Not shown is the Bleve index (a simple KV store)
 
 Working with groups like Flyover Country, Gplates (future), Neotoma, Magic and others for using downstream data
 
-![access](./media/access.png)
+![access](../media/access.png)
 
 > *Note: Bulk RDF downloads enable OCD to act as a pass through semantic enhancement (possibly via GeoLink)
 

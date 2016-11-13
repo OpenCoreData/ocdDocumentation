@@ -22,8 +22,6 @@ Open Core Data Status Update for CSDCO Nov 2016 D.C. Meeting
 - **Data Access and Use**
 	- Human, machine and by other data service providers/partners
 
-<img src="./media/notLikeTheOthers.jpg" alt="connections" style="float:right;width:400px;"/>
-One of these things is not like the others....
 
 ---
 # Over View

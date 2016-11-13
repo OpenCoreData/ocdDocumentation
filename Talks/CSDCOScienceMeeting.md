@@ -1,7 +1,7 @@
 <!-- $theme: default -->
 <!-- template: invert -->
 <!-- page_number: true -->
-<!-- footer: Talk at https://goo.gl/YFJol1 and screencast https://youtu.be/GjW_TrkUl0U-->
+<!-- footer: Talk at https://goo.gl/YFJol1 and screencast https://youtu.be/GjW_TrkUl0U -->
 
 <img src="./media/logo22.png" alt="logo" style="float:right; width: 100px;"/>
 
@@ -52,7 +52,7 @@ Working with groups like Flyover Country, Gplates (future), Neotoma, Magic and o
 
 ---
 ### Expanding on *human* access methods
-### Connetion to existing workflows (notebooks etc)
+### Connection to existing work-flows (notebooks etc)
 
 * Use of web based UIs and APIs to allow many approaches to the data.
 * Provide citation and DOI/IGSN information

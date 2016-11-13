@@ -1,7 +1,7 @@
 <!-- $theme: default -->
 <!-- template: invert -->
 <!-- page_number: true -->
-<!-- footer: This presentation is at https://github.com/OpenCoreData/ocdDocumentation/tree/master/Talks -->
+<!-- footer: Talk at https://goo.gl/YFJol1 and screencast https://youtu.be/GjW_TrkUl0U-->
 
 <img src="./media/logo22.png" alt="logo" style="float:right; width: 100px;"/>
 

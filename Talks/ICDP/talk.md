@@ -106,10 +106,10 @@ Access to all elements of OCD.  So external sites can call for
 data, free text results, or any other call used in the
 site UI/UX.
 ```
+
 ---
 
 ## Functional Goals
-
 
 | Function        | Description     
 | ------------- |:-------------: 

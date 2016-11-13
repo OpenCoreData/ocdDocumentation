@@ -10,7 +10,10 @@ Open Core Data Status Update for CSDCO Nov 2016 D.C. Meeting
 ![drillheads](./media/drillHeads.jpg)  
 
 ##### A review of Open Core Data [opencoredata.org](http://opencoredata.org)
-###### Douglas Fils ( [@fils](https://twitter.com/fils) )
+###### Douglas Fils ( [@fils](https://twitter.com/fils) ) 
+
+**COL, CSDCO, IEDA, JRSO-IODP, NSF EAR-1550787, 1550887, 1550917, 1338322, 1462297, OCE-0950477**
+
 --- 
 # Outline
 

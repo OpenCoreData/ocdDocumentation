@@ -54,13 +54,11 @@ References:
 
 [@GEDE]: GEDE Digital Object Topic Group <https://www.rd-alliance.org/group/gede-group-european-data-experts-rda/wiki/gede-digital-object-topic-group>
 
-Three elements  (file objects, metadata objects, package objects.  )
-
 ### Object Storage Implementation
 
 The basis of the object storage is around Minio [@Minio] which is an open source S3 API implementation.   Minio is a high performance and scalable object storage system.  It also support S3 Select API [@S3Select] for query across tabular data objects.
 
-![](./Images/do - Overview.png)
+![](./Images/doaoverview.png)
 
 Figure 2:  OCD implementation of DO pattern
 
@@ -103,15 +101,17 @@ team at Google Research who were developing what would become the Google Dataset
 Several sessions and presentation were held at ESIP and AGU (refs).  From these several additional connections 
 and projects arose.  Including:
 
-* ESIP Science on Schema  (geoschemas.org) 
+* ESIP Science on Schema 
+  * <https://github.com/ESIPFed/science-on-schema.org>
+  * <https://geoschemas.org/>
 * A follow on Project 419 (in progress now) 
 
 
 ### schema.org extensions
 
-Schema.org is a means to synthesize and align multiple data models. 
+Schema.org is a means to synthesize and align multiple data models.  The base dataset type for schmea.org is found at <https://schema.org/Dataset> .   It is derived from DCAT and there is a work underway to align better schema.org and DCAT.   
 
-A key element of schema.org is that it is an extensible model.    
+However, neither of these is expressive enough to define domain specific goals such as paleomagnetics or geochemistry  concepts.   The authors of schema.org were well aware that the core schema.org only served to as a base upper level set of concepts.   Built into schema.org is a rich extension model that allows the creation and connection of domain specific vocabularies.  
 
 ### EarthCube Project 418
 Project 418 is an ESSO-managed pilot project which addresses some of EarthCube's
@@ -147,10 +147,7 @@ A key focus of Project 418 was on extending the vocabulary aspect of this approa
 
 ### EarthCube Project 419 
 
-Note the P419 work on data services (and time) to connect these with static data sets.  
-Beyond swagger of course.   Note also the developments with OWL Time and the geologic age (adding BP).   
-
-Note connection with PaleoMag and Site Survey Database
+The follow on work for 418 will focus on data services (services that expose data) and also time based data including data defined by geologic time.   P419 is in communication with the PaleoMagnetics service Magic to demonstrate these and is also working with IODP Site Survey on approaches to shared resource identifiers to align data across various data system.  
 
 
 ### ESIP Science on Schema
@@ -185,7 +182,7 @@ funding sources, geologic time, citation information, sample identifiers or a wh
 to their domain.   Using these then an automated system for testing comliance is in testing 
 
 
-ref: https://github.com/fils/shaclservice
+ref: https://github.com/fils/shaclservice and <https://www.w3.org/TR/shacl/> 
 
 ### OBO Foundry 
 To simplify the development and deployment of a vocabulary a dialog with the 
@@ -195,24 +192,17 @@ has been collaborating with OBO for some time.   Also, recently ESIP has been al
 from SWEET with OBO Foundary.  
 
 Based on this initial work on a revised scientific drilling ontology is in development.  Leveraging the 
-OBO ontology SDK to better facilitate cross walks on other semantic vocabularies the initial work can be found at
-(do I want to link?)
+OBO ontology SDK to better facilitate cross walks on other semantic vocabularies.
 
 http://www.obofoundry.org/
 
 ### Other activities
-bioschemas for example
-DCAT alignment with schema.org
-
-### Suggestions
-This domain vocabulary is key to enable IR goals.  
-
-interest and connect to a larger community of domain vocabularies. 
+* BioSchemas as an example community in the Bio community we are communicating with
+* DCAT alignment with schema.org
+* W3C and OGC time reference systems including Ma and BP (requested)
 
 
 
-
-The main outcome of Bioschemas [@BioSchema] is a collection of specifications that provide guidelines to facilitate a more consistent adoption of schema.org markup within the life sciences.
 
 ## FAIR Data
 
@@ -277,7 +267,7 @@ Australian National Data Service
 
 ## Sample Identifiers
 
-
+The section is not yet developed.  We are working with IGSNs and have developed a means to integrate them into the object architecture and the knowledge graph for query.  
 
 
 
@@ -285,19 +275,17 @@ Australian National Data Service
 
 ### API maintance
 
-Talk about GraphQL and graphs here...
-issues with maintaining APIs but also with aligning graphql to graph model.  
-potential for shacl -> graphql.
+The section is not yet developed.  
+
+* Talk about GraphQL and graphs here...
+* issues with maintaining APIs but also with aligning graphql to graph model.  
+* potential for shacl -> graphql.
 
 ### Web Components
 
+The section is not yet developed.  
 
 
-Notes: 
-Recall ESIP and Force 11 citation guidelines 
-EarthCube Shared Architecture Meeting
-
-### 
 
 ------
 

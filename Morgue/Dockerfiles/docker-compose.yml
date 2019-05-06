@@ -1,0 +1,54 @@
+# Ref: https://blog.blindside.io/docker-compose-go-c2bb7bed0bab#.lo5lwvpph
+# Note:  Oracle is not here..  nor is mongo (to be replaced anyway)
+# TODO:   add in Caddy!!!!
+version: "2"
+
+services:
+  ocdweb:
+    image: opencoredata/ocdweb:0.3
+    ports:
+     - "9900:9900"
+    # expose:
+    #   - 9900
+    environment:
+      MONGO_HOST: 172.17.0.2
+  
+  ocdservices:
+    image: opencoredata/ocdservices:0.2
+    ports:
+     - "6789:6789"
+  
+  ocdsearch:
+    image: opencoredata/opensearch:0.2
+    ports:
+     - "9800:9800"
+     - "9802:9802"
+    volumes:
+       - /Users/dfils/Data/OCDDataVolumes/indexes:/indexes
+ 
+  blazegraph:
+    image: opencoredata/blazegraph:0.3
+    ports:
+     - "9999:9999"
+ 
+  minio:
+    image: minio/minio
+    command: server /export
+    ports:
+     - "9000:9000"
+    volumes:
+       - /Users/dfils/Data/OCDDataVolumes/S3FileStore:/export
+       - /Users/dfils/Data/OCDDataVolumes/minioconfig:/root/.minio
+
+
+  # caddy:
+  #   image: opencoredata/caddy:0.3
+  #   # ports:
+  #   #  - "80:80"
+  #   #  - "433:433"
+  #   #  - "2015:2015"
+  #   network_mode: host
+#    depends_on:
+#     - ocdweb 
+#     - ocdservices 
+#     - ocdsearch 

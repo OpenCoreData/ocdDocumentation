@@ -208,11 +208,11 @@ http://www.obofoundry.org/
 
 <img src="./Images/fair.png"  height="100"/>
 
+ FAIR data principles align well with the open and scalable approaches that are the core of web architecture.  Resources on the web present information about themselves to address discovery and access and provide stateless representation that can be shared to and accessed by others.    OCD was involved with the AGU Enabling FAIR Data meetings and has used these principles to guide the selection and development of OCD approaches.  
+
 ### AGU Enabling FAIR Data
 
-Mention here connections to AGU Enabling FAIR data work.
-
-How can we help address “F” in a scalable, standards based and easy to implement manner?
+The following sections define the various elements of the elements of FAIR.  This information can be found anywhere and should be moved to the appendix or another document.  I
 
 ### Findable
 
@@ -267,7 +267,9 @@ Australian National Data Service
 
 ## Sample Identifiers
 
-The section is not yet developed.  We are working with IGSNs and have developed a means to integrate them into the object architecture and the knowledge graph for query.  
+The section is not yet developed.  
+
+We are working with IGSNs and have developed a means to integrate them into the object architecture and the knowledge graph for query.  
 
 
 

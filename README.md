@@ -38,7 +38,7 @@ The basic storage and reference approach is built around the a Digital Object Pa
 
 The pattern is defined by the figure 1 below.  
 
-![](/home/fils/opencoredata.org/ocdDocumentation/Images/doa.png)
+![](./Images/doa.png)
 
 Figure 1: Basic Digital Object Pattern (Credit RDA  (exact document needs to be found))
 
@@ -60,7 +60,7 @@ Three elements  (file objects, metadata objects, package objects.  )
 
 The basis of the object storage is around Minio [@Minio] which is an open source S3 API implementation.   Minio is a high performance and scalable object storage system.  It also support S3 Select API [@S3Select] for query across tabular data objects.
 
-![](/home/fils/opencoredata.org/ocdDocumentation/Images/do - Overview.png)
+![](./Images/do - Overview.png)
 
 Figure 2:  OCD implementation of DO pattern
 
@@ -68,7 +68,7 @@ Figure 2:  OCD implementation of DO pattern
 
 Following the DO pattern and detailed up and broken out below the metadata data objects are also stored as objects in the system.  The metadata follows the RDA PID pattern and also is inspired by the W3C DID recommendations.   The metadata is in a RDF format and serialized in JSON-LD.  See appendix for example record for simple object metadata.  Note this is only an object metadata record and not a package metadata record.  
 
-![](/home/fils/opencoredata.org/ocdDocumentation/Images/metadataDO.png)
+![](./Images/metadataDO.png)
 
 ### Packaging
 

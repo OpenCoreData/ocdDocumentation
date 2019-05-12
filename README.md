@@ -7,14 +7,12 @@
 Open Core Data (OCD) has been prototyping approaches to a scalable and easy to maintain architecture to expose scientific drilling data and to provide a pattern for the sharing of related data.   The result of this work and research has arrived at the following key features
 
 1. Guidance based around FAIR principles as advocated by AGU Enabling Fair Data (<http://www.copdess.org/enabling-fair-data-project/>)
-2. Digital Object Architecture 
-3. Data in Context through semantics
+2. Digital Object Architecture  (see references in this sections)
+3. Data in Context through semantics  (schema.org + extensions)
 
-The Open Core Data pattern is open by design and the digital object pattern means it can act as a digital object store to external services.  This means that communities in a scientific drilling community can call and extend the objects locally.  This approach is under discussion with Magic, Site Survey and Neotoma among others.  The approach is not a single monolithic pattern but a distributed one allowing communities of practice with domain expertise to focus on value add activities while pulling objects and graph elements necessary either dynamically over the net or pulled locally.   Local copies retain their provenance and links to their canonical authority.
+This approach implements the patterns of a global digital object cloud as defined in the Research Data Alliance (RDA)  references below.  A Digital Object (DO)  in this context is a simple byte stream.  This might be a zip file, jpeg, movie, pdf or CSV document.  Also, packages can be defined is a DO that references other DOs to form a data set.  So, for example, a Frictionless Data Package manifest defined by a package.json would itself be a DO pointing to DO byte streams.  Additionally, nothing stops this sequence so data catalogs of data sets could also be defined a DO.  (See figure 1 below)
 
-This approach implements the patterns of a global digital object cloud as defined in the Research Data Alliance (RDA)  references below. 
-
-Open Core Data has brought both IODP and CSDCO data holdings together at opencoredata.org using a mix of local and community ontologies.  These data have then be exposed following open data and LOD patterns with machine readable metadata and CSV for the Web (ref) data formats.  A collection of API’s have been developed to allow use of this data in notebook environment like Jupyter and R which include spatial elements.
+> NOTE:   Another document has been made to define object metadata kernel approaches
 
 References:  
 
@@ -34,7 +32,7 @@ References:
 
 ## Digital Object Architecture 
 
-The basic storage and reference approach is built around the a Digital Object Pattern as defined by the various references in this documents.    This pattern has also been adopted as the new pattern being developed by the *Biological and Chemical Oceanography Data Management Office* (*BCO-DMO*).   This work is being done in collaboration with Open Core Data now and is being co-developed by Fils and Shepherd.  
+The basic storage and reference approach is built around the a Digital Object Pattern as defined by the various references in this documents.  These are mostly from Research Data Alliance (RDA) outcomes.   This pattern has also been adopted as the approach being developed by the *Biological and Chemical Oceanography Data Management Office* (*BCO-DMO*) for their architecture rework.   This work is being done in collaboration with Open Core Data and is being co-developed by Fils and Shepherd.  
 
 The pattern is defined by the figure 1 below.  
 
@@ -42,13 +40,11 @@ The pattern is defined by the figure 1 below.
 
 Figure 1: Basic Digital Object Pattern (Credit RDA  (exact document needs to be found))
 
-The OCD implementation of this pattern is defined in figure 2 in the following section.  The DO pattern suggest that even the metadata data for a given object is also stored as an object.  So, for example, a core description document is stored as a given object with an ID and its metadata then is another digital object with yet another ID.   
+The implementation of this pattern is defined in figure 2 in the following section.  The DO pattern suggest that even the metadata data for a given object is also stored as an object.  So, for example, a core description document is stored as a given object with an ID and its metadata then is another digital object with yet another ID.   
 
-In the OCD pattern then, these metadata objects are stored as graphs (RDF data model) encoded in JSON-LD.  These are then loaded into a triple store that allow for query and API development on top of this graph.   
+In the OCD pattern then, these metadata objects are stored as graphs (using the RDF data model) encoded in JSON-LD.  These are then loaded into a triple store that allow for query and API development on top of this graph.   Likely this will be done via GraphQL.  This is interest in seeing if SHACL shape files can be used as a means to the define GraphQL schema for these services.   These same shape files would also then be validation methods for object metadata going into the system.  
 
-Also, packages of objects can then be assembled together into data sets.  These data sets are also object stored in the object store system.  To address this OCD has implemented Frictionless Data Packages (@FDP) 
-
-All three objects (file, metadata, package) use the same system for storage and access and one common graph data model for query and access.   
+As noted, packages of objects can then be assembled together into data sets.  These data sets are also object stored in the object store system.  All three objects (file, metadata, package) use the same system for storage and access and one common graph data model for query and access.   
 
 References:
 
@@ -56,7 +52,7 @@ References:
 
 ### Object Storage Implementation
 
-The basis of the object storage is around Minio [@Minio] which is an open source S3 API implementation.   Minio is a high performance and scalable object storage system.  It also support S3 Select API [@S3Select] for query across tabular data objects.
+The basis of the object storage is around Minio [@Minio] which is an open source S3 API implementation.   Minio is a high performance and scalable object storage system.  It also support S3 Select API [@S3Select] for query across tabular data objects if that functionality is needed.
 
 ![](./Images/doaoverview.png)
 
@@ -64,7 +60,7 @@ Figure 2:  OCD implementation of DO pattern
 
 ### Metadata
 
-Following the DO pattern and detailed up and broken out below the metadata data objects are also stored as objects in the system.  The metadata follows the RDA PID pattern and also is inspired by the W3C DID recommendations.   The metadata is in a RDF format and serialized in JSON-LD.  See appendix for example record for simple object metadata.  Note this is only an object metadata record and not a package metadata record.  
+Following the DO pattern and detailed up and broken out below the metadata data objects are also stored as objects in the system.  The approaches to metadata are described in an associated document.   The metadata is in a RDF format and serialized in JSON-LD.  See appendix for example record for simple object metadata.  Note this is only an object metadata record and not a package metadata record.  
 
 ![](./Images/metadataDO.png)
 
@@ -73,6 +69,8 @@ Following the DO pattern and detailed up and broken out below the metadata data 
 Digital object can take many forms.  At a basic level they can be simple objects or meta-data objects.  In addition to these, object can and should be packaged into collections.  These collections should also be objects defined as virtual collections of other objects.  
 
 Open Core has selected Frictionless Data Packages [@FDP] as the reference package model.  This is combined with BagIt as an archival package.   FDP package have an extensive set of available tools (ref: <https://frictionlessdata.io/software/>).   FDP also allows for a packaging by reference.  Packages can be defined by references to the digital objects.   This allows virtual packages to be defined that 
+
+This packaging approach will also be used to assemble archival packages following IEDA packaging profiles.  These will then be sent to IEDA to enable archival functions to be addressed.  
 
 ### Object Work Flow
 
@@ -98,13 +96,15 @@ During the development process of OCD an opportunity arose to work on what becam
 NSF EarthCube program.  Additionally, P418 developers (Fils, Shepherd) became aware of and communicated with the 
 team at Google Research who were developing what would become the Google Dataset Search Tool.
 
-Several sessions and presentation were held at ESIP and AGU (refs).  From these several additional connections 
-and projects arose.  Including:
+Several sessions and presentation were held at ESIP and AGU (refs needed).  From these several additional connections and projects arose.  Including:
 
 * ESIP Science on Schema 
   * <https://github.com/ESIPFed/science-on-schema.org>
   * <https://geoschemas.org/>
-* A follow on Project 419 (in progress now) 
+* A follow on Project 419 (in progress now) With a focus on better spatial, temporal and service description.
+  * https://github.com/earthcubearchitecture-project418/p419voctemporal 
+  * https://github.com/earthcubearchitecture-project418/p419dcatservices
+  * Also reference the DCAT-2 developments at <https://w3c.github.io/dxwg/dcat/#time-and-space> 
 
 
 ### schema.org extensions
@@ -186,20 +186,16 @@ ref: https://github.com/fils/shaclservice and <https://www.w3.org/TR/shacl/>
 
 ### OBO Foundry 
 To simplify the development and deployment of a vocabulary a dialog with the 
-Open Biological and Biomedical Ontology (OBO) Foundry has begun.   Though started in the bio community the work 
-has been generalized to allow many domains to leverage the work.  The ocean science community in particular
-has been collaborating with OBO for some time.   Also, recently ESIP has been aliging the cryosphere concepts
-from SWEET with OBO Foundary.  
+Open Biological and Biomedical Ontology (OBO) (http://www.obofoundry.org/) Foundry has begun.   Though started in the bio community the work has been generalized to allow many domains to leverage the work.  The ocean science community in particular has been collaborating with OBO for some time.   Also, recently ESIP has been aliging the cryosphere concepts from SWEET with OBO Foundary.  
 
-Based on this initial work on a revised scientific drilling ontology is in development.  Leveraging the 
-OBO ontology SDK to better facilitate cross walks on other semantic vocabularies.
+The full extent of how OBO can or should be connected is not yet defined.  
 
-http://www.obofoundry.org/
+Independent of OBO work on a scientific drilling ontology based on CSDCO and JRSO types and properties has already been developed.  
 
 ### Other activities
 * BioSchemas as an example community in the Bio community we are communicating with
-* DCAT alignment with schema.org
-* W3C and OGC time reference systems including Ma and BP (requested)
+* DCAT alignment with schema.org (as referenced above)
+* W3C and OGC time reference systems including Ma and BP (requested, need reference)
 
 
 
@@ -220,8 +216,6 @@ This includes assigning a persistent identifier (like a [DOI](https://www.ands.o
 
 Australian National Data Service
 
-
-
 > F1. (meta)data are assigned a globally unique and eternally persistent identifier.
 > F2. data are described with rich metadata.
 > F3. (meta)data are registered or indexed in a searchable resource.
@@ -232,8 +226,6 @@ Australian National Data Service
 This may include making the data open using a standardised protocol. However the data does not necessarily have to be open. There are sometimes good reasons why data [cannot be made open](https://www.ands.org.au/working-with-data/sensitive-data), for example privacy concerns, national security or commercial interests. If it is not open there should be clarity and transparency around the conditions governing access and reuse.
 
 Australian National Data Service
-
-
 
 > A1  (meta)data are retrievable by their identifier using a standardized communications protocol.
 > A1.1 the protocol is open, free, and universally implementable.
@@ -269,7 +261,7 @@ Australian National Data Service
 
 The section is not yet developed.  
 
-We are working with IGSNs and have developed a means to integrate them into the object architecture and the knowledge graph for query.  
+We are working with IGSNs and have developed a means to integrate them into the object metadata and the knowledge graph for query.   Further work needs to take place here.
 
 
 
@@ -285,7 +277,7 @@ The section is not yet developed.
 
 ### Web Components
 
-The section is not yet developed.  
+The section is not yet developed.  Reference <http://geocomponents.org/> 
 
 
 
